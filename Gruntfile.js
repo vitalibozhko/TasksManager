@@ -292,6 +292,28 @@ module.exports = function (grunt) {
         cwd: '<%= yeoman.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
+      },
+      app2dist: {
+        expand: true,
+        cwd: '<%= yeoman.app %>',
+        dest: '<%= yeoman.dist %>',
+        src: [
+          '*.{ico,png,txt}',
+          '.htaccess',
+          '*.html',
+          'views/{,*/}*.html',
+          '*.js',
+          'bower_components/**/*',
+          'fonts/*'
+        ]
+      },
+      processed2dist: {
+        expand: true,
+        cwd: '.tmp',
+        dest: '<%= yeoman.dist %>',
+        src: [
+          '**/*'
+        ]
       }
     },
 
@@ -346,7 +368,6 @@ module.exports = function (grunt) {
     }
   });
 
-
   grunt.registerTask('serve', function (target) {
     if (target === 'dist') {
       return grunt.task.run(['build', 'connect:dist:keepalive']);
@@ -361,6 +382,8 @@ module.exports = function (grunt) {
       'watch'
     ]);
   });
+
+  grunt.registerTask('heroku', ['clean:server', 'bower-install', 'concurrent:server', 'autoprefixer', 'copy:app2dist', 'copy:processed2dist']);
 
   grunt.registerTask('server', function () {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');

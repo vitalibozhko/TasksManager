@@ -1,5 +1,6 @@
 {
   "name": "coretracker",
+  "appPath": "app",
   "version": "0.0.0",
   "dependencies": {
     "angular": "1.2.6",
