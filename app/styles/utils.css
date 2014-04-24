@@ -1,0 +1,100 @@
+﻿.hidden {
+    display: none;
+}
+
+.center {
+    text-align: center;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.dark {
+    color: #333 !important;
+}
+
+.white {
+    color: #FFF !important;
+}
+
+.red {
+    color: #DD5A43 !important;
+}
+
+.light-red {
+    color: #FF7777 !important;
+}
+
+.blue {
+    color: #478FCA !important;
+}
+
+.light-blue {
+    color: #93CBF9 !important;
+}
+
+.green {
+    color: #69AA46 !important;
+}
+
+.light-green {
+    color: #B6E07F !important;
+}
+
+.orange {
+    color: #FF892A !important;
+}
+
+.purple {
+    color: #A069C3 !important;
+}
+
+.pink {
+    color: #C6699F !important;
+}
+
+.pink2 {
+    color: #D6487E !important;
+}
+
+.brown {
+    color: brown !important;
+}
+
+.grey {
+    color: #777 !important;
+}
+
+.bigger-110 {
+    font-size: 110%;
+}
+
+.bigger-125 {
+    font-size: 125%;
+}
+
+.bigger-150 {
+    font-size: 150%;
+}
+
+.bigger-200 {
+    font-size: 200%;
+}
+
+.smaller-90 {
+    font-size: 90%;
+}
+
+.smaller-75 {
+    font-size: 75%;
+}
+
+.smaller-50 {
+    font-size: 50%;
+}
+

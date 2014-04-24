@@ -1,0 +1,112 @@
+#login{background:#fff url(../img/beach.jpg) no-repeat center top;background-size:100% auto}
+.section{padding:20px 0;background:#fff}
+.section-light{background:#f8f8f8;border-top:1px solid #e7e7e7;border-bottom:1px solid #e7e7e7}
+.section-dark{padding:20px 0;background-color:#26282e;color:#fff}
+.section-small{padding:10px 0}
+.collapse-padding-top{padding-top:0}
+.collapse-padding-bot{padding-bottom:0}
+.collapse-margin-top{margin-top:0}
+.collapse-margin-bot{margin-bottom:0}
+.add-padding-top{padding-top:20px}
+.add-padding-bot{padding-bottom:20px}
+.add-margin-top{margin-top:20px}
+.add-margin-bot{margin-bottom:20px}
+.limit{max-height:250px;overflow-y:scroll}
+.navbar{margin-bottom:0}
+.nav-pills{margin-bottom:15px}
+.thumbnail{margin-bottom:20px}
+html {overflow-y: scroll;}
+
+.popover {
+    z-index: 2000;   
+}
+
+body .modal-group {
+  width: 900px; /* desired relative width */
+  /* place center */
+  margin-left:auto;
+  margin-right:auto; 
+}
+
+body .modal-group-small {
+  width: 860px; /* desired relative width */
+  /* place center */
+  margin-left:auto;
+  margin-right:auto; 
+}
+
+
+.typeahead,
+.tt-query,
+.tt-hint {
+  width: 470px;
+  height: 30px;
+  padding: 8px 12px;
+  line-height: 30px;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  outline: none;
+}
+
+.typeahead {
+  background-color: #fff;
+}
+
+.typeahead:focus {
+  border: 2px solid #0097cf;
+}
+
+.tt-query {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tt-hint {
+    color: #999;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+}
+
+.tt-dropdown-menu {
+  width: 422px;
+  margin-top: 12px;
+  padding: 8px 0;
+  background-color: #fff;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+          box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.tt-suggestion {
+  padding: 3px 20px;
+  line-height: 24px;
+}
+
+.tt-suggestion.tt-is-under-cursor {
+  color: #fff;
+  background-color: #0097cf;
+
+}
+
+.tt-suggestion p {
+  margin: 0;
+}
+
+.twitter-typeahead {
+    width: 470px;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+
+}
+.assessmentValue {
+ width: 5%; 
+ text-align: center;
+ font-weight: bold;   
+}

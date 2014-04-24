@@ -1,0 +1,64 @@
+<div class="modal-header">
+    <button type="button" class="close" ng-click="taskEditCtrl.close()">&times;</button>
+    <h4 class="modal-title" id="editTaskLabel">Edit task</h4>
+</div>
+<form name="taskForm" ng-submit="taskEditCtrl.submit()" novalidate>
+    <div class="modal-body">
+        <div class="form-group">
+            <label>Category:</label>
+            <div class="input-group">
+                <select class="form-control select2" ng-model="taskEditCtrl.task.category" name="category" placeholder="Select Category">
+                    <option value="">Select Category</option>
+                    <option value="My Business Tasks">My Business Tasks</option>
+                    <option selected="selected" value="My Tasks">My Tasks</option>
+                </select>
+                <span class="input-group-addon"><i class="fa fa-tags fa-fw"></i></span>
+            </div>
+            <span class="help-block"></span>
+        </div>
+        <div class="form-group" ng-class="{'has-error' : taskForm.title.$invalid}">
+            <label>Task:</label>
+            <div class="input-group">
+                <input class="form-control" ng-model="taskEditCtrl.task.title" name="title" type="text" value="Call 1 prospect" required />
+                <span class="field-validation-valid help-inline"></span>
+                <span class="input-group-addon"><i class="fa fa-tasks fa-fw"></i></span>
+            </div>
+            <span class="help-block"></span>
+        </div>
+        <div class="form-group" ng-class="{'has-error' : taskForm.occurenciesNumber.$invalid}">
+            <label>Number of Occurrences:</label>
+            <div class="input-group">
+                <input type="number" class="form-control" ng-model="taskEditCtrl.task.occurenciesNumber" name="occurenciesNumber" type="text" value="1" min="1" integer required />
+                <span class="input-group-addon"><i class="fa fa-repeat fa-fw"></i></span>
+            </div>
+            <span class="help-block"></span>
+        </div>
+        <div class="form-group">
+            <label>Additional Information/Comments:</label>
+            <textarea class="form-control" cols="20" ng-model="taskEditCtrl.task.comments" rows="3">
+                Use my contacts list and call 1 person per day.</textarea>
+                <span class="help-block"></span>
+            </div>
+            <div class="form-group">
+                <label>Display:</label>
+                <div class="btn-group btn-group-justified">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default" ng-model="taskEditCtrl.task.interval" btn-radio="2">Daily</button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default" ng-model="taskEditCtrl.task.interval" btn-radio="3">Weekly</button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default" ng-model="taskEditCtrl.task.interval" btn-radio="4">Monthly</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a class="btn btn-default" ng-click="taskEditCtrl.close()">Close</a>
+            <button class="btn btn-primary" type="submit">Edit task</button>
+            <a class="btn btn-danger" ng-click="taskEditCtrl.delete()"><i class="fa fa-trash-o"></i>
+                Delete Task
+            </a>
+        </div>
+    </form>

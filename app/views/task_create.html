@@ -1,0 +1,68 @@
+<div class="modal-header">
+    <button type="button" class="close" ng-click="taskCreateCtrl.close()">&times;</button>
+    <h4 class="modal-title" id="addTaskLabel">Add new task</h4>
+</div>
+<form name="taskForm" ng-submit="taskCreateCtrl.submit()" novalidate>
+    <div class="modal-body">
+        <div class="form-group">
+            <label>Create New Category:</label>
+            <div class="input-group">
+                <input class="form-control" name="newCategory" placeholder="Add Category" type="text">
+                <span class="input-group-addon"><i class="fa fa-tags fa-fw"></i></span>
+            </div>
+            <span class="help-block"></span>
+        </div>
+        <div class="form-group">
+            <label>Select Existing Category:</label>
+            <div class="input-group">
+                <select class="form-control select2" ng-model="taskCreateCtrl.task.category" name="category" placeholder="Select Category">
+                    <option selected="selected" value="">Select Category</option>
+                    <option value="My Business Tasks">My Business Tasks</option>
+                    <option value="My Tasks">My Tasks</option>
+                </select>
+                <span class="input-group-addon"><i class="fa fa-tags fa-fw"></i></span>
+            </div>
+        </div>
+        <span class="help-block"></span>
+        <div class="form-group" ng-class="{'has-error' : taskForm.title.$invalid &amp;&amp; taskForm.title.$dirty}">
+            <label>Enter Your Task:</label>
+            <div class="input-group">
+                <input class="form-control" ng-model="taskCreateCtrl.task.title" name="title" placeholder="Task" type="text" required>
+                <span class="input-group-addon"><i class="fa fa-tasks fa-fw"></i></span>
+            </div>
+            <span class="help-block"></span>
+        </div>
+        <div class="form-group" ng-class="{'has-error' : taskForm.occurenciesNumber.$invalid}">
+            <label>Enter Number of Occurrences:</label>
+            <div class="input-group">                            
+                <input class="form-control" ng-model="taskCreateCtrl.task.occurenciesNumber" name="occurenciesNumber" placeholder="Occurrences" value="1" type="number" min="1" integer required>
+                <span class="input-group-addon"><i class="fa fa-repeat fa-fw"></i></span>
+            </div>
+            <span class="help-block"></span>
+        </div>
+        <div class="form-group">
+            <label>Enter Additional Information/Comments:</label>
+            <textarea class="form-control" cols="20" ng-model="taskCreateCtrl.task.comments" name="comments" rows="3"></textarea>
+            <span class="help-block"></span>
+        </div>
+        <div class="form-group">
+            <label>How Often To Display Task?</label>
+            <div class="btn-group btn-group-justified" data-toggle="buttons" id="radios">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default" ng-model="taskCreateCtrl.task.interval" btn-radio="2">Daily</button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default" ng-model="taskCreateCtrl.task.interval" btn-radio="3">Weekly</button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default" ng-model="taskCreateCtrl.task.interval" btn-radio="4">Monthly</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <a class="btn btn-default" ng-click="taskCreateCtrl.close()">Close</a>
+        <button class="btn btn-primary" type="submit">Add task</button>
+    </div>
+</form>
